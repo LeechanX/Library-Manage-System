@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="entity.Book" table="book">
+        <id name="tid" type="java.lang.Integer">
+			<column name="tid"/>
+			<generator class="native">
+			<param name="native">IDAUTO</param>
+			</generator>
+		</id>
+		<property name="id" type="java.lang.String">
+			<column name="id"/>
+		</property>
+		<property name="name" type="java.lang.String">
+			<column name="name"/>
+		</property>
+		<property name="type" type="java.lang.String">
+			<column name="type"/>
+		</property>
+		<property name="author" type="java.lang.String">
+			<column name="author"/>
+		</property>
+		<property name="publisher" type="java.lang.String">
+			<column name="publisher"/>
+		</property>
+		<property name="publish_time" type="java.lang.String">
+			<column name="publish_time"/>
+		</property>
+		<property name="stock" type="java.lang.Integer">
+			<column name="stock"/>
+		</property>
+		<property name="price" type="java.lang.String">
+			<column name="price"/>
+		</property>
+		<property name="translator" type="java.lang.String">
+			<column name="translator"/>
+		</property>
+		<property name="bookcaseid" type="java.lang.String">
+			<column name="bookcaseid"/>
+		</property>
+		<property name="type2" type="java.lang.Integer">
+			<column name="type2"/>
+		</property>
+		<property name="bookpic" type="java.lang.String">
+			<column name="bookpic"/>
+		</property>
+		<joined-subclass name="entity.WelcomedBook" table="PopularBook">
+		  <key column="book_auto_id"></key>
+		  <property name="number" column="number" type="java.lang.Integer">
+		  </property>
+		</joined-subclass>
+		
+ </class>
+</hibernate-mapping>

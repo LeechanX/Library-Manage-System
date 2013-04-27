@@ -1,0 +1,129 @@
+*{
+	font-family: Arial;
+}
+body{
+	background-color: transparent;
+}
+label small{
+	color: gray;
+}
+span{
+	font-family: 微软雅黑;
+	font-size: 22px;
+	color: red;
+}
+#container{
+	position: relative;
+	background-color: #F0F8FF;
+	height: 400px;
+	margin:30px auto 0px auto;
+	width: 800px;
+}
+#container #first, #type2, #third, #fourth{ 
+    display: none; 
+}
+#container #first{ display: block; }
+input[type=text],input[type=number]{
+	height: 30px;
+}
+#first, #type2, #third,#fourth{
+margin:0px auto 0px auto;
+	background-color: #f5f5f5;
+	width: 740px;
+	height: 300px;
+	padding:10px 30px 20px 30px;
+	position: relative;
+}
+#third{
+height: 400px;
+}
+.form{
+	padding-top: 30px;
+	position: relative;
+}
+#fourth .form{
+	padding-top: 10px;
+	position: relative;
+}
+a.btn,input[type=button]{
+	position: absolute;
+	top: 340px;
+	left: 700px;
+}
+.progress {
+	width: 500px;
+	position: absolute;
+	top: 345px;
+	left:100px; 
+}
+td.title{
+font-size: 17px;
+color: gray;
+}
+td.contents{
+font-size: 17px;
+color: red;
+}
+input.error { border: 1px solid red;height: 30px; }
+input.success{border: 1px solid green;height: 30px;}
+div.selecter{
+width: 206px;
+height: 30px;
+float: left; 
+}
+span.selecter-selected{
+width: 186px;
+height: 15px; 
+}
+div.tips{
+width: 80px;
+height: 30px;
+padding-top: 15px;
+float: left;
+padding-left: 5px;
+}
+div.filebox{
+position: absolute;
+left: 100px;
+top: 30px;
+}
+
+input#setPic{
+position: absolute;
+left:380px; 
+top:280px;
+}
+.file{ 
+position:absolute;
+filter:alpha(opacity:0);
+opacity: 0;
+left: 0px;
+top: 0px;
+width: 100px;
+height: 30px;
+}
+select[id='type']{
+width:100px;
+position: absolute;
+top: 200px;
+left: 5px;
+}
+select[id="continuetype"]{
+width:100px;
+position:absolute;
+top: 200px;
+left: 110px;
+}
+label{
+height:30px;
+}
+small#oneselect{
+position: absolute;
+top:150px;
+left:210px;
+}
+small#twoselect{
+position: absolute;
+top:206px;
+ left:215px;
+}

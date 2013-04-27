@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+	
+<struts>
+
+    <package name="aboutreader" extends="struts-default">
+    <interceptors>  
+            <interceptor name="authority"  
+                class="Invocation.LoginInvocation">  
+            </interceptor>  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>  
+        <global-results>  
+            <result name="login">/Login.jsp</result>  
+        </global-results>  
+        <action name="reader_register" class="Action.ReaderAction" method="register">
+           <result name="success">readerui.jsp</result>
+            <result name="error">wrong.jsp</result>
+        </action>
+        <action name="reader_check" class="Action.ReaderAction" method="check">
+        </action>
+        <action name="reader_login" class="Action.ReaderLoginAction" method="login">
+           <result name="success">index.jsp</result>
+           <result name="error">wrong.jsp</result>
+        </action>
+        <action name="query_reader" class="Action.ReaderAction" method="query">
+           <result name="success">mgr_reader.jsp</result>
+        </action>
+        <action name="delete_reader" class="Action.ReaderAction" method="delete">
+        </action>
+        <action name="myinfor_" class="Action.ReaderAction" method="getInfo">
+           <result name="success">readerinfo.jsp</result>
+                   <interceptor-ref name="mydefault" />
+        </action> 
+         <action name="myinfor_man" class="Action.ReaderAction" method="getInfo">
+           <result name="success">readerinfo.jsp</result>
+        </action> 
+        <action name="editmyinfo" class="Action.ReaderAction" method="update">
+        </action>
+        <action name="reader_exit" class="Action.ReaderAction" method="exit">
+        <result name="success">index.jsp</result>
+        </action>  
+        <action name="jumplogin" class="Action.ReaderLoginAction" method="login">
+           <result name="success" type="redirect">${url}</result>
+           <result name="error">wrong.jsp</result>
+        </action>  
+    </package>   
+    
+    <package name="aboutmanager" extends="struts-default">
+    <action name="manager_log" class="Action.ManagerAction" method="login">
+    <result name="success">checkLogin.jsp</result>
+    <result name="error">wrong.jsp</result>
+    </action>
+    <action name="mgr_exit" class="Action.ManagerAction" method="exit">
+        <result name="success">index.jsp</result>
+        </action>    
+    </package>
+    
+    <package name="aboutbook" extends="struts-default">
+         <action name="book_infor" class="Action.BookAction" method="bookinf">
+          <result name="success">bookinfo.jsp</result>
+          </action>
+          <action name="bookmanagequery" class="Action.BookAction" method="bookmanagequery">
+            <result name="success">mgr_book.jsp</result>
+          </action>
+          <action name="deletebook" class="Action.BookAction" method="deletebook">
+          </action>
+          <action name="toeditbook" class="Action.BookAction" method="toeditbook">
+           <result name="success">editbook.jsp</result>
+          </action>
+          <action name="updateedit" class="Action.BookAction" method="updateedit"></action>
+          <action name="queryBook" class="Action.BookAction" method="queryBook">
+           <result name="success">queryUI.jsp</result>
+          </action>
+          <action name="addBook" class="Action.BookAction" method="addBook">
+           <result name="success">newBook.jsp</result>
+          </action>
+          <action name="topten" class="Action.BookAction" method="topten">
+           <result name="success">rank.jsp</result>
+          </action>
+    </package>
+    
+    <package name="aboutborrow" extends="struts-default">
+    <interceptors>  
+            <interceptor name="authority"  
+                class="Invocation.LoginInvocation">  
+            </interceptor>  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>  
+        <global-results>  
+            <result name="login">/Login.jsp</result>  
+        </global-results>  
+         <action name="showborrowlist" class="Action.BorrowAction" method="showborrow">
+          <result name="success">myborrow.jsp</result>
+          <interceptor-ref name="mydefault" />
+          </action>
+          <action name="beginborrow" class="Action.BorrowAction" method="beginborrow">
+          <result name="success">borrow.jsp</result>
+          </action>
+          <action name="borrow" class="Action.BorrowAction" method="borrow">
+          </action>
+          <action name="delayborrow" class="Action.BorrowAction" method="continueBorrow">
+          </action>
+          <action name="queryback" class="Action.BorrowAction" method="queryBack">
+            <result name="success">back.jsp</result>
+          </action>
+          <action name="bookback" class="Action.BorrowAction" method="bookback"></action>
+    </package>
+    
+     <package name="aboutlike" extends="struts-default">
+     <interceptors>  
+            <interceptor name="authority"  
+                class="Invocation.LoginInvocation">  
+            </interceptor>  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>  
+        <global-results>  
+            <result name="login">/Login.jsp</result>  
+        </global-results>  
+         <action name="showlikelist" class="Action.LikeAction" method="showlikelist">
+          <result name="success">mylike.jsp</result>
+          <interceptor-ref name="mydefault" />
+          </action>
+          <action name="addlike" class="Action.LikeAction" method="addlike">
+          </action>
+          <action name="deletelike" class="Action.LikeAction" method="deletelike">
+          </action>
+          <action name="checklike" class="Action.LikeAction" method="checklike">
+          </action>
+    </package>
+    
+    <package name="aboutnews" extends="struts-default">
+       <action name="addNews" class="Action.NewsAction" method="addNews">
+         <result name="success">result.jsp</result>
+       </action>
+       <action name="showNews" class="Action.NewsAction" method="showNews">
+         <result name="success">newslist.jsp</result>
+       </action>
+       <action name="showthisNews" class="Action.NewsAction" method="showthisNews">
+         <result name="success">ReadNews.jsp</result>
+       </action>
+    </package>
+    
+    <package name="aboutupload" extends="struts-default">
+        <action name="uploadpic" class="Action.UploadAction" method="UploadPic">
+        </action>
+    </package>
+    
+     <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+</struts>

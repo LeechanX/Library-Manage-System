@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/myaction.do" location="50,50" dimension="179,104" />
+  <StrutsActivity path="/structs2test.jsp" location="350,50" dimension="123,53" />
+  <StrutsActivity path="/HelloAction.do" location="650,50" dimension="114,104" />
+  <StrutsActivity path="/structs2.jsp" location="950,50" dimension="102,53" />
+  <StrutsTransition id="/structs2.jsp,null,/HelloAction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,76" />
+      <AbsolutePoint location="764,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/HelloAction.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="707,154" />
+      <AbsolutePoint location="707,266" />
+      <AbsolutePoint location="146,266" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/structs2test.jsp,null,/myaction.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,76" />
+      <AbsolutePoint location="229,76" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

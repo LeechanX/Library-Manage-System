@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Microsoft JDBC Driver 4.0 for SQL Server/sqljdbc_4.0/chs/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jspSmartUpload.jar"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.cross.easystruts.eclipse.STRUTS12_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/asm-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/asm-commons-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/commons-fileupload-1.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/commons-io-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/freemarker-2.3.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/ognl-3.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/struts2-core-2.3.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lcx/Documents/work/My Doc/struts-2.3.8-all/struts2.3 must/xwork-core-2.3.8.jar"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_EM"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_CORE"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

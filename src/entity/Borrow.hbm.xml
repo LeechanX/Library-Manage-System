@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="entity.Borrow" table="borrow">
+        <id name="id" type="java.lang.Integer">
+			<column name="id"/>
+			<generator class="native">
+			<param name="native">IDAUTO</param>
+			</generator>
+		</id>
+		<property name="readerid" type="java.lang.String">
+			<column name="readerid"/>
+		</property>
+		<property name="bookid" type="java.lang.String">
+			<column name="bookid"/>
+		</property>
+		<property name="borrow_time" type="java.lang.String">
+			<column name="borrowTime"/>
+		</property>
+		<property name="back_time" type="java.lang.String">
+			<column name="back_time"/>
+		</property>
+		<property name="is_back" type="java.lang.Integer">
+			<column name="is_back"/>
+		</property>
+ </class>
+</hibernate-mapping>

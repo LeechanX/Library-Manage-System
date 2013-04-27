@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="entity.News" table="news">
+       <id name="time" column="time" type="java.lang.String">
+            <generator class="assigned" />
+        </id>
+		<property name="newsname" type="java.lang.String">
+			<column name="newsname"/>
+		</property>
+		<property name="contentpath" type="java.lang.String">
+			<column name="contentpath"/>
+		</property>
+ </class>
+</hibernate-mapping>
