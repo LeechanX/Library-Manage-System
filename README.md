@@ -9,7 +9,7 @@ Struts2+Hibernate3实现的图书馆管理系统
 图书检索:
 ---------------------------
 ![github](http://img.my.csdn.net/uploads/201304/20/1366465449_5958.PNG "github")
-其他图:
+部分管理员界面图:
 ---------------------------
 ![github](http://img.blog.csdn.net/20130427171017361 "github")
 ![github](http://img.blog.csdn.net/20130427171053985 "github")
